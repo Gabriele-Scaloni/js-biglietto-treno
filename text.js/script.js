@@ -10,16 +10,25 @@ console.log();
 let prezzoKm = (km * 0.21) ;
 console.log();
 
-let sconto1 = (prezzoKm - (prezzoKm/100 * 20 ));
+
+
+let sconto1 =   (prezzoKm - (prezzoKm/100 * 20 ));
 console.log();
-let sconto2 = (prezzoKm - (prezzoKm/100 * 40 ));
+let sconto2 =   (prezzoKm - (prezzoKm/100 * 40 ));
 console.log();
 
+/*  regola base   let n = num.toFixed(2); */
+
+let price1 = sconto1.toFixed(2);
+let price2 = sconto2.toFixed(2);
+let price = prezzoKm.toFixed(2);
+
+
 if (age < 18 ) {
-    prezzoDaPagare.innerHTML = `il prezzo da pagare é ${sconto1} €`
+    prezzoDaPagare.innerHTML = `il prezzo da pagare é ${price1} €`
 }
 else if  (age > 65) {
-    prezzoDaPagare.innerHTML = `il prezzo da pagare é ${sconto2} €`
+    prezzoDaPagare.innerHTML = `il prezzo da pagare é ${price2} €`
 }
 else if  (age) {
     prezzoDaPagare.innerHTML = `il prezzo da pagare é ${prezzoKm} €`;
